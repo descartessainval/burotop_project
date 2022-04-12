@@ -1,38 +1,283 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Jua&display=swap');
+
+*,body,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    min-height: 98vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  letter-spacing: .5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* LOGIN */
+.container-form{
+   display: flexbox;
+   align-items: center;
+}
+
+.Form-header img{
+    display: block;
+    width: 5vw;
+    padding-top: 78px;
+    padding-left: 2vw;
+}
+
+.form-section{
+    padding: 2vw;
+    width: 50vw;
+    margin-top: 8rem;
+}
+
+form{
+  margin-top: 2rem;
+  height: 40vh;
+}
+
+form, input{
+  width : 20rem;
+    margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-section .sub-title{
+  font-family: 'Inter',sans-serif;
+  font-size: 30px;
+
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 0 5rem;
+
+}
+.accueil {
+  /* padding: 2vw; */
+  /* border: red solid 2px; */
+  width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-right: 2rem;
+  margin-top: 6rem;
+}
+
+.accueil,h1{
+  font-family: 'Jua',  sans-serif;
   color: white;
+  font-size: 50px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.accueil img{
+  /* border:red solid 1px; */
+    display: block;
+    width: 23rem;
+    margin: 0;
+    padding: 0;
+    padding-left: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn{
+    background-color: #92c0f4;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: bolder;
+}
+/*REGISTER*/
+.sub-title2{
+  font-family: 'Inter',sans-serif;
+  font-size: 30px;
+}
+
+.form-group-flex{
+  display: flex;
+  
+}
+.form-group-flex, input{
+  width: 21rem;
+}
+
+.form-section-inscription, h1{
+    padding: 2vw;
+    width: 50vw;
+}
+
+/* HEADER */
+
+.Header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+}
+.Header img{
+  display: block;
+  width:4rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.fa-user {
+  color: black;
+}
+
+.collapse:not(.show) {
+  display: flex;
+}
+
+.nav-link {
+  margin-right: 1rem;
+  /* border: '1px solid red'; */
+  font-family: 'Inter',  sans-serif;
+  font-weight: normal;
+ 
+}
+/*DASHBOARD*/
+.Dashboard{
+  padding-top: 3rem;
+}
+
+h3{
+  font-family: 'Inter',  sans-serif;
+}
+.nav-btn{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin:0 5rem;
+}
+
+.button .btn-1,.button .btn-2{
+  border-radius: 5px;
+  margin-right: 2rem;
+  padding: 0 1rem;
+  color: whitesmoke;
+  background: rgb(88, 147, 241);
+  border-style:none;
+}
+
+.dashboard-content{
+   /* border: red 1px solid;  */
+  min-height: 75vh;
+  margin-top: 2rem;
+}
+
+.Row-dashb{
+  min-height: 75vh;
+  /* border: none, 1px, none, none; */
+}
+
+/*tabs nav*/
+.bloc-tabs {
+  display: flex;
+}
+
+.tabs {
+
+  /* padding: 15px; */
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+  font-size: .80rem;
+}
+
+.active-tabs {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  background: rgb(88, 147, 241);
+}
+
+.bloc-tabs button {
+  border: none;
+font-size: .8rem; 
+}
+
+.content-tabs {
+  flex-grow: 1;
+}
+
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+
+.content p {
+  width: 100%;
+  height: 100%;
+}
+
+.active-content {
+  display: block;
+}
+
+.row>* {
+    padding-right: 0;
+    padding-left: 0;   
+}
+
+.form-control {
+  font-size: 0.75rem;
+  padding: 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.button_add{
+  text-transform: none;
+  padding: 0.3rem 0.5rem;
+ 
+}
+
+/*modal-document*/
+
+.modal-document{
+}
+
+/*DASHBOARD => LISTE DES EMPLOYES*/
+
+.alert{
+  padding: 0;
+  text-align: center;
 }
