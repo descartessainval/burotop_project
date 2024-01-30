@@ -7,7 +7,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 const HomeScreen = () => {
   return (
     <HomeScreenStyled>
-      {/* <h1 className='title'></h1> */}
       <h2 className='title'> Bienvenue Sur la page d'accueil de BUROTOP</h2>
       <section className='connexion-home'>
         <article className='left'>
